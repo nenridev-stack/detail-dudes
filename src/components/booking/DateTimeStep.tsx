@@ -20,11 +20,11 @@ interface DateTimeStepProps {
 // ============================================================
 
 const TIME_SLOTS = [
-  { id: 'morning', label: 'MaÃ±ana', time: '8:00 AM â€“ 10:00 AM', startHour: 8 },
-  { id: 'mid-morning', label: 'Media MaÃ±ana', time: '10:00 AM â€“ 12:00 PM', startHour: 10 },
-  { id: 'afternoon', label: 'Tarde', time: '12:00 PM â€“ 2:00 PM', startHour: 12 },
-  { id: 'mid-afternoon', label: 'Media Tarde', time: '2:00 PM â€“ 4:00 PM', startHour: 14 },
-  { id: 'late-afternoon', label: 'Tarde Final', time: '4:00 PM â€“ 6:00 PM', startHour: 16 },
+  { id: 'morning', label: 'Morning', time: '8:00 AM - 10:00 AM', startHour: 8 },
+  { id: 'mid-morning', label: 'Mid-Morning', time: '10:00 AM - 12:00 PM', startHour: 10 },
+  { id: 'afternoon', label: 'Afternoon', time: '12:00 PM - 2:00 PM', startHour: 12 },
+  { id: 'mid-afternoon', label: 'Mid-Afternoon', time: '2:00 PM - 4:00 PM', startHour: 14 },
+  { id: 'late-afternoon', label: 'Late Afternoon', time: '4:00 PM - 6:00 PM', startHour: 16 },
 ] as const;
 
 // ============================================================

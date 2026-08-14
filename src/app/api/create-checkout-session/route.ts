@@ -47,9 +47,9 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: `${BUSINESS_INFO.name} â€” Booking Deposit`,
+              name: `${BUSINESS_INFO.name} - Booking Deposit`,
               description:
-                'DepÃ³sito reembolsable para confirmar tu cita. El precio final se confirma despuÃ©s de la inspecciÃ³n del vehÃ­culo.',
+                'Refundable deposit to confirm your appointment. Final price is confirmed after vehicle inspection.',
             },
             unit_amount: DEPOSIT_AMOUNT_USD * 100,
           },
@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        message: `No se pudo iniciar el pago: ${errorMessage}. Por favor intenta de nuevo o contÃ¡ctanos directamente.`,
+        message: `Could not initiate payment: ${errorMessage}. Please try again or contact us directly.`,
         fallbackContact: {
           phone: BUSINESS_INFO.phone,
           email: BUSINESS_INFO.email,
@@ -97,4 +97,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-

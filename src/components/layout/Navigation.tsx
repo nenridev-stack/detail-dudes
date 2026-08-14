@@ -53,7 +53,7 @@ export default function Navigation() {
           </span>
         </Link>
 
-        {/* Enlaces de NavegaciÃ³n Desktop */}
+        {/* Desktop Navigation Links */}
         <ul className="hidden md:flex items-center gap-1">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
@@ -96,7 +96,7 @@ export default function Navigation() {
           })}
         </ul>
 
-        {/* BotÃ³n Hamburguesa MÃ³vil */}
+        {/* Mobile Hamburger Button */}
         <button
           onClick={() => setIsMobileMenuOpen(true)}
           className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-lg text-white/70 hover:bg-white/10 transition-colors md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
@@ -108,7 +108,7 @@ export default function Navigation() {
         </button>
       </nav>
 
-      {/* MenÃº MÃ³vil */}
+      {/* Mobile Menu */}
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}

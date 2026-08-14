@@ -97,7 +97,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             aria-hidden="true"
           />
 
-          {/* Slide-out panel â€” dark glass */}
+          {/* Slide-out panel - dark glass */}
           <motion.div
             key="mobile-menu-panel"
             className="fixed inset-y-0 right-0 z-50 w-[280px] max-w-[80vw] bg-[#0a0a0a] border-l border-white/10 shadow-2xl md:hidden"
@@ -107,21 +107,21 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             exit="exit"
             role="dialog"
             aria-modal="true"
-            aria-label="MenÃº de navegaciÃ³n mÃ³vil"
+            aria-label="Mobile navigation menu"
           >
             {/* Close button */}
             <div className="flex items-center justify-end p-4">
               <button
                 onClick={onClose}
                 className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-md text-white/70 hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]"
-                aria-label="Cerrar menÃº"
+                aria-label="Close menu"
               >
                 <X className="h-6 w-6" />
               </button>
             </div>
 
             {/* Navigation links */}
-            <nav className="px-4 py-2" aria-label="NavegaciÃ³n mÃ³vil">
+            <nav className="px-4 py-2" aria-label="Mobile navigation">
               <ul className="flex flex-col gap-1">
                 {NAV_LINKS.map((link) => {
                   const isActive = pathname === link.href;

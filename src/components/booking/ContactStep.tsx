@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -328,7 +328,7 @@ export default function ContactStep({ contact, onContactChange, onNext }: Contac
         {/* Email */}
         <FloatingLabelInput
           id="contact-email"
-          label="Correo ElectrÃ³nico"
+          label="Email Address"
           value={form.email}
           onChange={(v) => updateField('email', v)}
           error={errors.email}
@@ -375,7 +375,7 @@ export default function ContactStep({ contact, onContactChange, onNext }: Contac
         />
       </div>
 
-      {/* BotÃ³n Siguiente */}
+      {/* Next Button */}
       <div className="mt-8 flex justify-center">
         <motion.button
           type="button"

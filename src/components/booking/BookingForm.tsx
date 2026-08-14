@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useReducer, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -276,7 +276,7 @@ export default function BookingForm() {
     dispatch({ type: 'PREV_STEP' });
   }, []);
 
-  // Handle form submission â€” uploads photos to Cloudinary first, then creates
+  // Handle form submission - uploads photos to Cloudinary first, then creates
   // a Stripe Checkout session for the $50 deposit. The Cloudinary URLs are stored
   // in session metadata so the webhook can include them in emails/calendar/sheets.
   const handleSubmit = useCallback(async () => {
@@ -328,7 +328,7 @@ export default function BookingForm() {
       const data: BookingResponse & { url?: string } = await response.json();
 
       if (data.success && data.url) {
-        // Redirect to Stripe Checkout â€” payment confirmation happens via webhook
+        // Redirect to Stripe Checkout - payment confirmation happens via webhook
         window.location.href = data.url;
         return;
       }
@@ -336,7 +336,7 @@ export default function BookingForm() {
       dispatch({
         type: 'SUBMIT_ERROR',
         payload: {
-          message: data.message || 'Algo saliÃ³ mal. Por favor intenta de nuevo.',
+          message: data.message || 'Something went wrong. Please try again.',
           fallbackContact: data.fallbackContact,
         },
       });
@@ -559,7 +559,7 @@ export default function BookingForm() {
         onBack={handleBack}
       />
 
-      {/* Step Content â€” rendered directly without animation to prevent blank flashes */}
+      {/* Step Content - rendered directly without animation to prevent blank flashes */}
       <div className="relative min-h-[300px]">
         {renderStep()}
       </div>
