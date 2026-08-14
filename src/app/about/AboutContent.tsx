@@ -29,8 +29,8 @@ export function AboutContent() {
               <div className="flex justify-center">
                 <div className="relative h-80 w-80 overflow-hidden rounded-2xl bg-white/5 border border-white/10 shadow-xl md:h-96 md:w-96">
                   <Image
-                    src="/brand/before-aftermerged.jpeg"
-                    alt="PrimeAura Detailing — imagen de marca"
+                    src="/brand/addtionalImage.jpeg"
+                    alt="Detail Dudes — imagen de marca"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 320px, 384px"
@@ -42,7 +42,7 @@ export function AboutContent() {
               {/* Narrativa del Propietario */}
               <div>
                 <h2 className="text-3xl font-bold text-white">
-                  PrimeAura Detailing
+                  Detail Dudes
                 </h2>
                 <p className="mt-2 text-lg font-medium text-accent-400">
                   Fundador y Detallista Principal

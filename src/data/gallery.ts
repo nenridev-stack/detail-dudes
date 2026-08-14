@@ -1,19 +1,19 @@
-import type { GalleryItem } from '@/types';
+﻿import type { GalleryItem } from '@/types';
 
 export const galleryItems: GalleryItem[] = [
   {
     id: 'gallery-1',
     category: 'basic-wash',
-    vehicleType: 'Sedán',
+    vehicleType: 'SedÃ¡n',
     beforeImage: {
-      src: '/brand/before-wash.jpeg',
+      src: '/brand/Before-cleaning-staringseats.jpeg',
       alt: 'Auto antes del lavado - exterior sucio necesita limpieza',
       width: 1200,
       height: 800,
     },
     afterImage: {
-      src: '/brand/after-wash.jpeg',
-      alt: 'Auto después del lavado profesional - limpio y brillante',
+      src: '/brand/After-Clean-staringseats.jpeg',
+      alt: 'Auto despuÃ©s del lavado profesional - limpio y brillante',
       width: 1200,
       height: 800,
     },
@@ -23,14 +23,14 @@ export const galleryItems: GalleryItem[] = [
     category: 'full-detail',
     vehicleType: 'SUV',
     beforeImage: {
-      src: '/brand/before-wash.jpeg',
+      src: '/brand/Before-cleaning-staringseats.jpeg',
       alt: 'SUV antes del detallamiento - estado previo al lavado',
       width: 1200,
       height: 800,
     },
     afterImage: {
-      src: '/brand/after-wash.jpeg',
-      alt: 'SUV después del detallamiento profesional completo',
+      src: '/brand/After-Clean-staringseats.jpeg',
+      alt: 'SUV despuÃ©s del detallamiento profesional completo',
       width: 1200,
       height: 800,
     },
@@ -38,16 +38,16 @@ export const galleryItems: GalleryItem[] = [
   {
     id: 'gallery-3',
     category: 'ceramic-coating',
-    vehicleType: 'Sedán',
+    vehicleType: 'SedÃ¡n',
     beforeImage: {
-      src: '/brand/before-wash.jpeg',
-      alt: 'Vehículo antes de la preparación para recubrimiento cerámico',
+      src: '/brand/Before-cleaning-staringseats.jpeg',
+      alt: 'VehÃ­culo antes de la preparaciÃ³n para recubrimiento cerÃ¡mico',
       width: 1200,
       height: 800,
     },
     afterImage: {
-      src: '/brand/after-wash.jpeg',
-      alt: 'Vehículo después del recubrimiento cerámico - acabado protegido',
+      src: '/brand/After-Clean-staringseats.jpeg',
+      alt: 'VehÃ­culo despuÃ©s del recubrimiento cerÃ¡mico - acabado protegido',
       width: 1200,
       height: 800,
     },
@@ -57,14 +57,14 @@ export const galleryItems: GalleryItem[] = [
     category: 'basic-wash',
     vehicleType: 'Camioneta',
     beforeImage: {
-      src: '/brand/before-wash.jpeg',
-      alt: 'Camioneta antes del servicio de lavado básico',
+      src: '/brand/Before-cleaning-staringseats.jpeg',
+      alt: 'Camioneta antes del servicio de lavado bÃ¡sico',
       width: 1200,
       height: 800,
     },
     afterImage: {
-      src: '/brand/after-wash.jpeg',
-      alt: 'Camioneta después del lavado con aplicación de espuma',
+      src: '/brand/After-Clean-staringseats.jpeg',
+      alt: 'Camioneta despuÃ©s del lavado con aplicaciÃ³n de espuma',
       width: 1200,
       height: 800,
     },
@@ -72,16 +72,16 @@ export const galleryItems: GalleryItem[] = [
   {
     id: 'gallery-5',
     category: 'full-detail',
-    vehicleType: 'Sedán',
+    vehicleType: 'SedÃ¡n',
     beforeImage: {
-      src: '/brand/before-wash.jpeg',
-      alt: 'Sedán antes del detallamiento completo - necesita atención',
+      src: '/brand/Before-cleaning-staringseats.jpeg',
+      alt: 'SedÃ¡n antes del detallamiento completo - necesita atenciÃ³n',
       width: 1200,
       height: 800,
     },
     afterImage: {
-      src: '/brand/after-wash.jpeg',
-      alt: 'Sedán después del detallamiento completo - condición de exhibición',
+      src: '/brand/After-Clean-staringseats.jpeg',
+      alt: 'SedÃ¡n despuÃ©s del detallamiento completo - condiciÃ³n de exhibiciÃ³n',
       width: 1200,
       height: 800,
     },
@@ -91,14 +91,14 @@ export const galleryItems: GalleryItem[] = [
     category: 'ceramic-coating',
     vehicleType: 'SUV',
     beforeImage: {
-      src: '/brand/before-wash.jpeg',
-      alt: 'SUV antes de la aplicación de recubrimiento cerámico',
+      src: '/brand/Before-cleaning-staringseats.jpeg',
+      alt: 'SUV antes de la aplicaciÃ³n de recubrimiento cerÃ¡mico',
       width: 1200,
       height: 800,
     },
     afterImage: {
-      src: '/brand/after-wash.jpeg',
-      alt: 'SUV después del proceso de detallamiento',
+      src: '/brand/After-Clean-staringseats.jpeg',
+      alt: 'SUV despuÃ©s del proceso de detallamiento',
       width: 1200,
       height: 800,
     },
@@ -106,7 +106,7 @@ export const galleryItems: GalleryItem[] = [
 ];
 
 /**
- * Filtrar elementos de galería por categoría. "all" devuelve la lista completa.
+ * Filtrar elementos de galerÃ­a por categorÃ­a. "all" devuelve la lista completa.
  */
 export function filterGalleryByCategory(
   items: GalleryItem[],

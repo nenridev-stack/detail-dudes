@@ -4,18 +4,18 @@ import { faqCategories } from '@/data/faq';
 import Accordion from '@/components/faq/Accordion';
 
 export const metadata: Metadata = {
-  title: 'Preguntas Frecuentes — PrimeAura Detailing',
+  title: 'Preguntas Frecuentes — Detail Dudes',
   description:
     'Encuentra respuestas a preguntas comunes sobre nuestros servicios de detallamiento automotriz, precios, área de servicio, preparación del vehículo y política de cancelación.',
   openGraph: {
-    title: 'Preguntas Frecuentes — PrimeAura Detailing',
+    title: 'Preguntas Frecuentes — Detail Dudes',
     description:
       'Encuentra respuestas a preguntas comunes sobre nuestros servicios de detallamiento automotriz, precios, área de servicio, preparación del vehículo y política de cancelación.',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'Preguntas Frecuentes — PrimeAura Detailing',
+    title: 'Preguntas Frecuentes — Detail Dudes',
     description:
       'Encuentra respuestas a preguntas comunes sobre nuestros servicios de detallamiento automotriz.',
   },

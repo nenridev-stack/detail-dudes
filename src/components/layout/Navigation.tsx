@@ -41,8 +41,8 @@ export default function Navigation() {
         >
           <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
             <Image
-              src="/brand/logo.jpeg"
-              alt="PrimeAura Detailing logo"
+              src="/brand/Logo.jpeg"
+              alt="Detail Dudes logo"
               width={40}
               height={40}
               className="object-cover w-full h-full"

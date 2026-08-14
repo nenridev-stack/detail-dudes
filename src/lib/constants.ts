@@ -200,9 +200,9 @@ export const NAV_LINKS = [
 // ============================================================
 
 export const BUSINESS_INFO = {
-  name: 'PrimeAura Detailing',
+  name: 'Detail Dudes',
   phone: '(555) 123-4567',
-  email: 'info@primeauradetailing.com',
+  email: 'info@detaildudes.com',
   whatsapp: '+15551234567',
   address: '123 Main Street, Anytown, TX 12345',
   hours: [
@@ -215,10 +215,10 @@ export const BUSINESS_INFO = {
     { day: 'Domingo', hours: 'Cerrado' },
   ],
   social: {
-    facebook: 'https://facebook.com/primeauradetailing',
-    instagram: 'https://instagram.com/primeauradetailing',
-    youtube: 'https://youtube.com/@primeauradetailing',
-    tiktok: 'https://tiktok.com/@primeauradetailing',
+    facebook: 'https://facebook.com/detaildudes',
+    instagram: 'https://instagram.com/detaildudes',
+    youtube: 'https://youtube.com/@detaildudes',
+    tiktok: 'https://tiktok.com/@detaildudes',
   },
 } as const;
 

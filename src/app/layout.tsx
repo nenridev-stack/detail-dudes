@@ -19,8 +19,8 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: 'PrimeAura Detailing | Detallamiento Profesional de Autos',
-    template: '%s | PrimeAura Detailing',
+    default: 'Detail Dudes | Detallamiento Profesional de Autos',
+    template: '%s | Detail Dudes',
   },
   description:
     'Servicios profesionales de detallamiento automotriz incluyendo interior/exterior completo, recubrimiento cerámico y paquetes de lavado básico para sedanes, SUVs y camionetas.',

@@ -19,7 +19,7 @@ export function CarSilhouette() {
       {/* Main car image */}
       <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
         <Image
-          src="/brand/hero.jpeg"
+          src="/brand/heroSectionImage.jfif"
           alt="Detallamiento profesional de autos"
           fill
           className="object-cover"

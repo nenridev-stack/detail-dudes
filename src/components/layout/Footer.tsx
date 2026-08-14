@@ -22,8 +22,8 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                 <Image
-                  src="/brand/logo.jpeg"
-                  alt="PrimeAura Detailing logo"
+                  src="/brand/Logo.jpeg"
+                  alt="Detail Dudes logo"
                   width={48}
                   height={48}
                   className="object-cover w-full h-full"

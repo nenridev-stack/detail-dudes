@@ -74,7 +74,7 @@ export function BeforeAfterSlider() {
             {/* Imagen después (fondo completo) */}
             <div className="absolute inset-0">
               <Image
-                src="/brand/after-wash.jpeg"
+                src="/brand/After-Clean-staringseats.jpeg"
                 alt="Auto después del detallamiento profesional - limpio y brillante"
                 fill
                 className="object-cover"
@@ -88,7 +88,7 @@ export function BeforeAfterSlider() {
               style={{ width: `${sliderPosition}%` }}
             >
               <Image
-                src="/brand/before-wash.jpeg"
+                src="/brand/Before-cleaning-staringseats.jpeg"
                 alt="Auto antes del servicio de detallamiento profesional"
                 fill
                 className="object-cover"

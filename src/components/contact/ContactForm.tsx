@@ -340,8 +340,8 @@ export default function ContactForm() {
               (555) 123-4567
             </a>{' '}
             o{' '}
-            <a href="mailto:info@primeauradetailing.com" className="underline font-medium">
-              info@primeauradetailing.com
+            <a href="mailto:info@detaildudes.com" className="underline font-medium">
+              info@detaildudes.com
             </a>
           </p>
         </motion.div>

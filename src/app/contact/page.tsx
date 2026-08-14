@@ -73,10 +73,10 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-medium text-white text-sm">Correo</h3>
                 <a
-                  href="mailto:info@primeauradetailing.com"
+                  href="mailto:info@detaildudes.com"
                   className="text-gray-400 text-sm hover:text-accent-400 transition-colors"
                 >
-                  info@primeauradetailing.com
+                  info@detaildudes.com
                 </a>
               </div>
             </div>
