@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -32,7 +32,7 @@ export default function Navigation() {
     >
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
-        aria-label="Navegación principal"
+        aria-label="Main navigation"
       >
         {/* Logo / Nombre del Negocio */}
         <Link
@@ -53,7 +53,7 @@ export default function Navigation() {
           </span>
         </Link>
 
-        {/* Enlaces de Navegación Desktop */}
+        {/* Enlaces de NavegaciÃ³n Desktop */}
         <ul className="hidden md:flex items-center gap-1">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
@@ -96,11 +96,11 @@ export default function Navigation() {
           })}
         </ul>
 
-        {/* Botón Hamburguesa Móvil */}
+        {/* BotÃ³n Hamburguesa MÃ³vil */}
         <button
           onClick={() => setIsMobileMenuOpen(true)}
           className="flex items-center justify-center w-11 h-11 min-w-[44px] min-h-[44px] rounded-lg text-white/70 hover:bg-white/10 transition-colors md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-          aria-label="Abrir menú"
+          aria-label="Open menu"
           aria-expanded={isMobileMenuOpen}
           aria-controls="mobile-menu"
         >
@@ -108,7 +108,7 @@ export default function Navigation() {
         </button>
       </nav>
 
-      {/* Menú Móvil */}
+      {/* MenÃº MÃ³vil */}
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
@@ -116,3 +116,4 @@ export default function Navigation() {
     </header>
   );
 }
+

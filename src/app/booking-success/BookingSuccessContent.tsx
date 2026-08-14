@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 import { BUSINESS_INFO } from '@/lib/constants';
 
 /**
- * Se muestra después de que Stripe redirige de vuelta desde Checkout con un
- * payment_status exitoso.
+ * Displayed after Stripe redirects back from Checkout with a
+ * successful payment_status.
  */
 export default function BookingSuccessContent() {
   const searchParams = useSearchParams();
@@ -34,17 +34,17 @@ export default function BookingSuccessContent() {
         </div>
 
         <h1 className="text-3xl font-display font-bold text-white mb-3">
-          Pago Recibido — ¡Todo Listo!
+          Payment Received — You&apos;re All Set!
         </h1>
 
         <p className="text-gray-400 max-w-md mx-auto mb-2">
-          Tu depósito de ${process.env.NEXT_PUBLIC_DEPOSIT_AMOUNT_USD || '50'} ha sido procesado y tu
-          cita con {BUSINESS_INFO.name} está confirmada.
+          Your ${process.env.NEXT_PUBLIC_DEPOSIT_AMOUNT_USD || '50'} deposit has been processed and your
+          appointment with {BUSINESS_INFO.name} is confirmed.
         </p>
 
         <p className="text-gray-500 text-sm max-w-md mx-auto mb-8">
-          Recibirás un correo de confirmación en breve con los detalles de tu cita.
-          Si tienes alguna pregunta, llámanos al{' '}
+          You&apos;ll receive a confirmation email shortly with your appointment details.
+          If you have any questions, call us at{' '}
           <a href={`tel:${BUSINESS_INFO.phone.replace(/[^+\d]/g, '')}`} className="text-accent-400 hover:text-accent-300">
             {BUSINESS_INFO.phone}
           </a>
@@ -52,14 +52,14 @@ export default function BookingSuccessContent() {
         </p>
 
         {sessionId && (
-          <p className="text-xs text-gray-600 mb-8">Referencia: {sessionId.slice(-12)}</p>
+          <p className="text-xs text-gray-600 mb-8">Reference: {sessionId.slice(-12)}</p>
         )}
 
         <Link
           href="/"
           className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent-500 text-white font-medium text-sm hover:bg-accent-400 transition-colors min-h-[44px]"
         >
-          Volver al Inicio
+          Back to Home
         </Link>
       </motion.div>
     </div>

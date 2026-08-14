@@ -4,16 +4,16 @@ export const galleryItems: GalleryItem[] = [
   {
     id: 'gallery-1',
     category: 'basic-wash',
-    vehicleType: 'SedÃ¡n',
+    vehicleType: 'Sedan',
     beforeImage: {
       src: '/brand/Before-cleaning-staringseats.jpeg',
-      alt: 'Auto antes del lavado - exterior sucio necesita limpieza',
+      alt: 'Car before wash - dirty exterior needs cleaning',
       width: 1200,
       height: 800,
     },
     afterImage: {
       src: '/brand/After-Clean-staringseats.jpeg',
-      alt: 'Auto despuÃ©s del lavado profesional - limpio y brillante',
+      alt: 'Car after professional wash - clean and shiny',
       width: 1200,
       height: 800,
     },
@@ -24,13 +24,13 @@ export const galleryItems: GalleryItem[] = [
     vehicleType: 'SUV',
     beforeImage: {
       src: '/brand/Before-cleaning-staringseats.jpeg',
-      alt: 'SUV antes del detallamiento - estado previo al lavado',
+      alt: 'SUV before detailing - pre-wash state',
       width: 1200,
       height: 800,
     },
     afterImage: {
       src: '/brand/After-Clean-staringseats.jpeg',
-      alt: 'SUV despuÃ©s del detallamiento profesional completo',
+      alt: 'SUV after full professional detail',
       width: 1200,
       height: 800,
     },
@@ -38,16 +38,16 @@ export const galleryItems: GalleryItem[] = [
   {
     id: 'gallery-3',
     category: 'ceramic-coating',
-    vehicleType: 'SedÃ¡n',
+    vehicleType: 'Sedan',
     beforeImage: {
       src: '/brand/Before-cleaning-staringseats.jpeg',
-      alt: 'VehÃ­culo antes de la preparaciÃ³n para recubrimiento cerÃ¡mico',
+      alt: 'Vehicle before ceramic coating preparation',
       width: 1200,
       height: 800,
     },
     afterImage: {
       src: '/brand/After-Clean-staringseats.jpeg',
-      alt: 'VehÃ­culo despuÃ©s del recubrimiento cerÃ¡mico - acabado protegido',
+      alt: 'Vehicle after ceramic coating - protected finish',
       width: 1200,
       height: 800,
     },
@@ -55,16 +55,16 @@ export const galleryItems: GalleryItem[] = [
   {
     id: 'gallery-4',
     category: 'basic-wash',
-    vehicleType: 'Camioneta',
+    vehicleType: 'Truck',
     beforeImage: {
-      src: '/brand/Before-cleaning-staringseats.jpeg',
-      alt: 'Camioneta antes del servicio de lavado bÃ¡sico',
+      src: '/brand/trunckbefore.jpeg',
+      alt: 'Truck before basic wash service',
       width: 1200,
       height: 800,
     },
     afterImage: {
-      src: '/brand/After-Clean-staringseats.jpeg',
-      alt: 'Camioneta despuÃ©s del lavado con aplicaciÃ³n de espuma',
+      src: '/brand/trunck-after.jpeg',
+      alt: 'Truck after wash with foam application',
       width: 1200,
       height: 800,
     },
@@ -72,16 +72,16 @@ export const galleryItems: GalleryItem[] = [
   {
     id: 'gallery-5',
     category: 'full-detail',
-    vehicleType: 'SedÃ¡n',
+    vehicleType: 'Sedan',
     beforeImage: {
       src: '/brand/Before-cleaning-staringseats.jpeg',
-      alt: 'SedÃ¡n antes del detallamiento completo - necesita atenciÃ³n',
+      alt: 'Sedan before full detail - needs attention',
       width: 1200,
       height: 800,
     },
     afterImage: {
       src: '/brand/After-Clean-staringseats.jpeg',
-      alt: 'SedÃ¡n despuÃ©s del detallamiento completo - condiciÃ³n de exhibiciÃ³n',
+      alt: 'Sedan after full detail - showroom condition',
       width: 1200,
       height: 800,
     },
@@ -91,14 +91,14 @@ export const galleryItems: GalleryItem[] = [
     category: 'ceramic-coating',
     vehicleType: 'SUV',
     beforeImage: {
-      src: '/brand/Before-cleaning-staringseats.jpeg',
-      alt: 'SUV antes de la aplicaciÃ³n de recubrimiento cerÃ¡mico',
+      src: '/brand/trunckbefore.jpeg',
+      alt: 'SUV before ceramic coating application',
       width: 1200,
       height: 800,
     },
     afterImage: {
-      src: '/brand/After-Clean-staringseats.jpeg',
-      alt: 'SUV despuÃ©s del proceso de detallamiento',
+      src: '/brand/trunck-after.jpeg',
+      alt: 'SUV after detailing process',
       width: 1200,
       height: 800,
     },
@@ -106,7 +106,7 @@ export const galleryItems: GalleryItem[] = [
 ];
 
 /**
- * Filtrar elementos de galerÃ­a por categorÃ­a. "all" devuelve la lista completa.
+ * Filter gallery items by category. "all" returns the full list.
  */
 export function filterGalleryByCategory(
   items: GalleryItem[],

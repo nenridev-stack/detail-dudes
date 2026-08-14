@@ -2,35 +2,35 @@ import type { Metadata } from 'next';
 import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contacto',
+  title: 'Contact',
   description:
-    'Ponte en contacto con nuestro equipo de detallamiento automotriz. Haz preguntas, solicita una cotización o programa una cita de servicio.',
+    'Get in touch with our auto detailing team. Ask questions, request a quote, or schedule a service appointment.',
 };
 
 export default function ContactPage() {
   return (
     <section className="py-16 md:py-24 pt-24 bg-black">
       <div className="container mx-auto px-4 max-w-6xl">
-        {/* Encabezado */}
+        {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-3">
-            Contáctanos
+            Contact Us
           </h1>
           <p className="text-gray-400 text-base max-w-lg mx-auto">
-            ¿Tienes una pregunta o quieres reservar un servicio? Envíanos un mensaje y
-            te responderemos dentro de 24 horas.
+            Have a question or want to book a service? Send us a message and
+            we&apos;ll get back to you within 24 hours.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Formulario de Contacto */}
+          {/* Contact Form */}
           <div className="order-2 lg:order-1">
             <ContactForm />
           </div>
 
-          {/* Barra lateral de información de contacto */}
+          {/* Contact Info Sidebar */}
           <div className="order-1 lg:order-2 space-y-8">
-            {/* Teléfono */}
+            {/* Phone */}
             <div className="flex items-start gap-4">
               <div className="w-10 h-10 rounded-lg bg-accent-500/10 flex items-center justify-center flex-shrink-0">
                 <svg
@@ -47,7 +47,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-white text-sm">Teléfono</h3>
+                <h3 className="font-medium text-white text-sm">Phone</h3>
                 <a
                   href="tel:+15551234567"
                   className="text-gray-400 text-sm hover:text-accent-400 transition-colors"
@@ -71,7 +71,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-white text-sm">Correo</h3>
+                <h3 className="font-medium text-white text-sm">Email</h3>
                 <a
                   href="mailto:info@detaildudes.com"
                   className="text-gray-400 text-sm hover:text-accent-400 transition-colors"
@@ -102,39 +102,39 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="text-gray-400 text-sm hover:text-green-400 transition-colors"
                 >
-                  Chatea con nosotros por WhatsApp
+                  Chat with us on WhatsApp
                 </a>
               </div>
             </div>
 
-            {/* Horario de Atención */}
+            {/* Business Hours */}
             <div>
-              <h3 className="font-medium text-white text-sm mb-3">Horario de Atención</h3>
+              <h3 className="font-medium text-white text-sm mb-3">Business Hours</h3>
               <table className="w-full text-sm">
                 <tbody className="divide-y divide-white/10">
                   <tr>
-                    <td className="py-2 text-gray-400">Lunes - Viernes</td>
+                    <td className="py-2 text-gray-400">Monday - Friday</td>
                     <td className="py-2 text-right text-white font-medium">8:00 AM - 6:00 PM</td>
                   </tr>
                   <tr>
-                    <td className="py-2 text-gray-400">Sábado</td>
+                    <td className="py-2 text-gray-400">Saturday</td>
                     <td className="py-2 text-right text-white font-medium">9:00 AM - 5:00 PM</td>
                   </tr>
                   <tr>
-                    <td className="py-2 text-gray-400">Domingo</td>
-                    <td className="py-2 text-right text-white font-medium">Cerrado</td>
+                    <td className="py-2 text-gray-400">Sunday</td>
+                    <td className="py-2 text-right text-white font-medium">Closed</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            {/* Mapa */}
+            {/* Map */}
             <div>
-              <h3 className="font-medium text-white text-sm mb-3">Área de Servicio</h3>
+              <h3 className="font-medium text-white text-sm mb-3">Service Area</h3>
               <div className="w-full h-48 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
                 <p className="text-gray-500 text-sm text-center px-4">
-                  Mapa de Google Maps —<br />
-                  Reemplazar con mapa real del área de servicio
+                  Google Maps —<br />
+                  Replace with actual service area map
                 </p>
               </div>
             </div>

@@ -5,8 +5,8 @@ import { reviews } from '@/data/reviews';
 import { ScrollReveal } from '@/components/motion';
 
 /**
- * Sección de testimonios con tarjetas de vidrio oscuro, bordes azules,
- * comillas brillantes y estrellas doradas sobre fondo oscuro.
+ * Testimonials section with dark glass cards, blue borders,
+ * glowing quotes, and gold stars on dark background.
  */
 export function TestimonialsSection() {
   const displayReviews = reviews.slice(0, 6);
@@ -14,22 +14,22 @@ export function TestimonialsSection() {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#111111]">
       <div className="max-w-7xl mx-auto">
-        {/* Encabezado de Sección */}
+        {/* Section Header */}
         <ScrollReveal>
           <div className="text-center mb-16">
             <p className="text-sm font-semibold uppercase tracking-wider text-accent-400 mb-3">
-              Testimonios
+              Testimonials
             </p>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-              Lo Que Dicen Nuestros Clientes
+              What Our Customers Say
             </h2>
             <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-              Reseñas reales de clientes reales que confían en nosotros con sus vehículos.
+              Real reviews from real customers who trust us with their vehicles.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Grid Desktop / Scroll Móvil */}
+        {/* Desktop Grid / Mobile Scroll */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayReviews.map((review, index) => (
             <motion.div
@@ -49,7 +49,7 @@ export function TestimonialsSection() {
           ))}
         </div>
 
-        {/* Scroll horizontal móvil */}
+        {/* Mobile horizontal scroll */}
         <div className="md:hidden flex gap-4 overflow-x-auto pb-4 scrollbar-hide -mx-4 px-4">
           {displayReviews.map((review) => (
             <div key={review.id} className="min-w-[300px] flex-shrink-0">
@@ -64,7 +64,7 @@ export function TestimonialsSection() {
         </div>
 
         <p className="text-center text-sm text-gray-600 mt-8 md:hidden">
-          ← Desliza para ver más →
+          ← Swipe to see more →
         </p>
       </div>
     </section>
@@ -84,7 +84,7 @@ function ReviewCard({ name, rating, text, service }: ReviewCardProps) {
 
   return (
     <div className="relative rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 p-6 border-l-4 border-l-accent-500 h-full flex flex-col transition-all duration-200 hover:border-white/20">
-      {/* Comilla decorativa — brillo azul */}
+      {/* Decorative quote — blue glow */}
       <span
         className="absolute top-4 right-5 text-5xl leading-none text-accent-500/20 font-serif pointer-events-none select-none"
         aria-hidden="true"
@@ -93,11 +93,11 @@ function ReviewCard({ name, rating, text, service }: ReviewCardProps) {
         &ldquo;
       </span>
 
-      {/* Calificación con estrellas — ámbar/dorado */}
+      {/* Star rating — amber/gold */}
       <div
         className="flex items-center gap-0.5 mb-4"
         role="img"
-        aria-label={`${rating} de 5 estrellas`}
+        aria-label={`${rating} out of 5 stars`}
       >
         {Array.from({ length: 5 }, (_, i) => (
           <svg
@@ -112,12 +112,12 @@ function ReviewCard({ name, rating, text, service }: ReviewCardProps) {
         ))}
       </div>
 
-      {/* Texto de la reseña */}
+      {/* Review text */}
       <p className="text-gray-300 flex-1 mb-5 text-sm leading-relaxed">
         &ldquo;{excerpt}&rdquo;
       </p>
 
-      {/* Información del cliente */}
+      {/* Customer info */}
       <div className="border-t border-white/10 pt-4">
         <p className="text-sm font-bold text-white">{name}</p>
         <p className="text-xs text-gray-500 mt-0.5">{service}</p>

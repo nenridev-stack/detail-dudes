@@ -254,17 +254,17 @@ export default function ContactForm() {
           </svg>
         </div>
         <h3 className="text-xl font-display font-bold text-white mb-2">
-          ¡Mensaje Enviado!
+          Message Sent!
         </h3>
         <p className="text-gray-400 text-sm max-w-md mx-auto">
-          Gracias por contactarnos. Te responderemos dentro de 24 horas.
+          Thanks for reaching out. We&apos;ll get back to you within 24 hours.
         </p>
         <button
           type="button"
           onClick={() => setSubmitStatus('idle')}
           className="mt-6 text-accent-400 font-medium text-sm hover:text-accent-300 transition-colors"
         >
-          Enviar otro mensaje
+          Send another message
         </button>
       </motion.div>
     );
@@ -272,10 +272,10 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
-      {/* Nombre */}
+      {/* Name */}
       <FloatingLabelInput
         id="contact-name"
-        label="Nombre"
+        label="Name"
         value={form.name}
         onChange={(v) => updateField('name', v)}
         error={errors.name}
@@ -284,10 +284,10 @@ export default function ContactForm() {
         required
       />
 
-      {/* Correo */}
+      {/* Email */}
       <FloatingLabelInput
         id="contact-email"
-        label="Correo Electrónico"
+        label="Email"
         value={form.email}
         onChange={(v) => updateField('email', v)}
         error={errors.email}
@@ -296,10 +296,10 @@ export default function ContactForm() {
         required
       />
 
-      {/* Asunto */}
+      {/* Subject */}
       <FloatingLabelInput
         id="contact-subject"
-        label="Asunto"
+        label="Subject"
         value={form.subject}
         onChange={(v) => updateField('subject', v)}
         error={errors.subject}
@@ -308,10 +308,10 @@ export default function ContactForm() {
         required
       />
 
-      {/* Mensaje */}
+      {/* Message */}
       <FloatingLabelInput
         id="contact-message"
-        label="Mensaje"
+        label="Message"
         value={form.message}
         onChange={(v) => updateField('message', v)}
         error={errors.message}
@@ -332,14 +332,14 @@ export default function ContactForm() {
           role="alert"
         >
           <p className="text-sm text-red-400 font-medium mb-1">
-            No se pudo enviar tu mensaje
+            Could not send your message
           </p>
           <p className="text-xs text-red-400/80">
-            Por favor intenta de nuevo, o contáctanos directamente al{' '}
+            Please try again, or contact us directly at{' '}
             <a href="tel:+15551234567" className="underline font-medium">
               (555) 123-4567
             </a>{' '}
-            o{' '}
+            or{' '}
             <a href="mailto:info@detaildudes.com" className="underline font-medium">
               info@detaildudes.com
             </a>
@@ -366,10 +366,10 @@ export default function ContactForm() {
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                 </svg>
-                Enviando...
+                Sending...
               </span>
             ) : (
-              'Enviar Mensaje'
+              'Send Message'
             )}
           </motion.button>
         </MagneticButton>

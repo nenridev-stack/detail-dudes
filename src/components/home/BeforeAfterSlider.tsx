@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 /**
- * Slider comparativo de antes/después con arrastre.
- * Usa eventos de puntero para soporte táctil + ratón.
+ * Before/after comparison slider with drag support.
+ * Uses pointer events for touch + mouse support.
  */
 export function BeforeAfterSlider() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,10 +45,10 @@ export function BeforeAfterSlider() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            Mira la Diferencia
+            See the Difference
           </h2>
           <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-            Arrastra el deslizador para revelar la transformación.
+            Drag the slider to reveal the transformation.
           </p>
         </div>
 
@@ -65,31 +65,31 @@ export function BeforeAfterSlider() {
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerUp}
             role="slider"
-            aria-label="Deslizador de comparación antes y después"
+            aria-label="Before and after comparison slider"
             aria-valuenow={Math.round(sliderPosition)}
             aria-valuemin={0}
             aria-valuemax={100}
             tabIndex={0}
           >
-            {/* Imagen después (fondo completo) */}
+            {/* After image (full background) */}
             <div className="absolute inset-0">
               <Image
                 src="/brand/After-Clean-staringseats.jpeg"
-                alt="Auto después del detallamiento profesional - limpio y brillante"
+                alt="Car after professional detailing - clean and shiny"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 800px"
               />
             </div>
 
-            {/* Imagen antes (recortada por posición del slider) */}
+            {/* Before image (clipped by slider position) */}
             <div
               className="absolute inset-0 overflow-hidden"
               style={{ width: `${sliderPosition}%` }}
             >
               <Image
                 src="/brand/Before-cleaning-staringseats.jpeg"
-                alt="Auto antes del servicio de detallamiento profesional"
+                alt="Car before professional detailing service"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 800px"
@@ -97,12 +97,12 @@ export function BeforeAfterSlider() {
               />
             </div>
 
-            {/* Línea divisora del slider */}
+            {/* Slider divider line */}
             <div
               className="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg z-10"
               style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
             >
-              {/* Asa del slider */}
+              {/* Slider handle */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center">
                 <svg
                   width="20"
@@ -129,12 +129,12 @@ export function BeforeAfterSlider() {
               </div>
             </div>
 
-            {/* Etiquetas */}
+            {/* Labels */}
             <span className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full z-20">
-              Antes
+              Before
             </span>
             <span className="absolute top-4 right-4 bg-black/70 backdrop-blur-sm text-white text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full z-20">
-              Después
+              After
             </span>
           </div>
         </motion.div>

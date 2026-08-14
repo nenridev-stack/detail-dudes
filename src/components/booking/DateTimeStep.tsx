@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -20,11 +20,11 @@ interface DateTimeStepProps {
 // ============================================================
 
 const TIME_SLOTS = [
-  { id: 'morning', label: 'Mañana', time: '8:00 AM – 10:00 AM', startHour: 8 },
-  { id: 'mid-morning', label: 'Media Mañana', time: '10:00 AM – 12:00 PM', startHour: 10 },
-  { id: 'afternoon', label: 'Tarde', time: '12:00 PM – 2:00 PM', startHour: 12 },
-  { id: 'mid-afternoon', label: 'Media Tarde', time: '2:00 PM – 4:00 PM', startHour: 14 },
-  { id: 'late-afternoon', label: 'Tarde Final', time: '4:00 PM – 6:00 PM', startHour: 16 },
+  { id: 'morning', label: 'MaÃ±ana', time: '8:00 AM â€“ 10:00 AM', startHour: 8 },
+  { id: 'mid-morning', label: 'Media MaÃ±ana', time: '10:00 AM â€“ 12:00 PM', startHour: 10 },
+  { id: 'afternoon', label: 'Tarde', time: '12:00 PM â€“ 2:00 PM', startHour: 12 },
+  { id: 'mid-afternoon', label: 'Media Tarde', time: '2:00 PM â€“ 4:00 PM', startHour: 14 },
+  { id: 'late-afternoon', label: 'Tarde Final', time: '4:00 PM â€“ 6:00 PM', startHour: 16 },
 ] as const;
 
 // ============================================================
@@ -360,15 +360,15 @@ export default function DateTimeStep({
 
   const handleNext = useCallback(() => {
     if (!selectedDate && !selectedTimeSlot) {
-      setError('Por favor selecciona una fecha y un horario para continuar.');
+      setError('Please select a date and time slot to continue.');
       return;
     }
     if (!selectedDate) {
-      setError('Por favor selecciona una fecha preferida.');
+      setError('Please select a preferred date.');
       return;
     }
     if (!selectedTimeSlot) {
-      setError('Por favor selecciona un horario.');
+      setError('Please select a time slot.');
       return;
     }
     setError(null);
@@ -381,7 +381,7 @@ export default function DateTimeStep({
         Elige Fecha y Hora
       </h2>
       <p className="text-gray-400 text-center text-sm mb-8">
-        Selecciona tu fecha y horario preferido para la cita
+        Select your preferred date and time for the appointment
       </p>
 
       {/* Calendar */}
@@ -434,7 +434,7 @@ export default function DateTimeStep({
                       whileTap={!isBooked ? { scale: 0.98 } : {}}
                       aria-pressed={isSelected}
                       aria-disabled={isBooked}
-                      aria-label={`${slot.label}: ${slot.time}${isBooked ? ' (no disponible)' : ''}${isSelected ? ' (seleccionado)' : ''}`}
+                      aria-label={`${slot.label}: ${slot.time}${isBooked ? ' (unavailable)' : ''}${isSelected ? ' (selected)' : ''}`}
                     >
                       {isSelected && !isBooked && (
                         <motion.div
@@ -503,3 +503,4 @@ export default function DateTimeStep({
     </div>
   );
 }
+

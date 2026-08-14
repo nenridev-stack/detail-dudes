@@ -5,14 +5,14 @@ import type {
 } from '@/types';
 
 // ============================================================
-// Opciones de Vehículos
+// Vehicle Options
 // ============================================================
 
 export const VEHICLE_OPTIONS: VehicleOption[] = [
   {
     id: 'sedan',
-    label: 'Sedán',
-    description: 'Compactos, medianos y cupés',
+    label: 'Sedan',
+    description: 'Compact, mid-size & coupes',
     image: '/brand/seedan.png',
     detailingImage: '/brand/seedan.png',
     startingPrice: 49,
@@ -20,15 +20,15 @@ export const VEHICLE_OPTIONS: VehicleOption[] = [
   {
     id: 'suv',
     label: 'SUV / Crossover',
-    description: 'SUVs y crossovers estándar',
+    description: 'Standard SUVs & crossovers',
     image: '/brand/suv.png',
     detailingImage: '/brand/suv.png',
     startingPrice: 69,
   },
   {
     id: 'truck',
-    label: 'Camioneta',
-    description: 'Pickups y vehículos grandes',
+    label: 'Truck',
+    description: 'Pickups & large vehicles',
     image: '/brand/truck.png',
     detailingImage: '/brand/truck.png',
     startingPrice: 89,
@@ -36,24 +36,24 @@ export const VEHICLE_OPTIONS: VehicleOption[] = [
 ];
 
 // ============================================================
-// Paquetes de Servicio
+// Service Packages
 // ============================================================
 
 export const SERVICE_PACKAGES: ServicePackage[] = [
   {
     id: 'basic-wash',
-    name: 'Lavado Básico',
+    name: 'Basic Wash',
     description:
-      'Un lavado exterior completo a mano y limpieza interior para mantener tu vehículo con aspecto fresco entre detallamientos completos.',
-    shortDescription: 'Lavado exterior a mano y limpieza interior',
+      'A full hand wash exterior and interior wipe-down to keep your vehicle looking fresh between full details.',
+    shortDescription: 'Hand wash exterior & interior wipe-down',
     icon: 'Droplets',
     includedServices: [
-      'Lavado exterior a mano',
-      'Limpieza de rines y llantas',
-      'Limpieza de ventanas (exterior)',
-      'Aspirado interior',
-      'Limpieza de tablero y consola',
-      'Limpieza de marcos de puertas',
+      'Hand wash exterior',
+      'Wheel & tire cleaning',
+      'Window cleaning (exterior)',
+      'Interior vacuuming',
+      'Dashboard & console wipe-down',
+      'Door jamb cleaning',
     ],
     pricing: {
       sedan: 49,
@@ -69,22 +69,22 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   },
   {
     id: 'full-detail',
-    name: 'Interior + Exterior Completo',
+    name: 'Full Interior + Exterior',
     description:
-      'Limpieza profunda interior y pulido exterior completo. Restaura tu vehículo a condición de sala de exhibición por dentro y por fuera.',
-    shortDescription: 'Limpieza profunda interior y exterior pulido',
+      'Deep interior cleaning and full exterior polish. Restores your vehicle to showroom condition inside and out.',
+    shortDescription: 'Deep interior cleaning & polished exterior',
     icon: 'Sparkles',
     includedServices: [
-      'Lavado exterior completo a mano y secado',
-      'Tratamiento con barra de arcilla',
-      'Pulido de pintura en un paso',
-      'Aplicación de sellador y cera',
-      'Aspirado profundo interior',
-      'Limpieza de piel/tela',
-      'Todas las superficies interiores detalladas',
-      'Limpieza de ventanas (interior y exterior)',
-      'Acondicionamiento de llantas',
-      'Ambientador',
+      'Full hand wash & dry exterior',
+      'Clay bar treatment',
+      'One-step paint polish',
+      'Sealant & wax application',
+      'Deep interior vacuuming',
+      'Leather/fabric cleaning',
+      'All interior surfaces detailed',
+      'Window cleaning (interior & exterior)',
+      'Tire conditioning',
+      'Air freshener',
     ],
     pricing: {
       sedan: 149,
@@ -100,22 +100,22 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
   },
   {
     id: 'ceramic-coating',
-    name: 'Recubrimiento Cerámico',
+    name: 'Ceramic Coating',
     description:
-      'Aplicación de recubrimiento cerámico de grado profesional para protección duradera de pintura, acabado hidrofóbico y resistencia UV.',
-    shortDescription: 'Protección cerámica duradera para pintura',
+      'Professional-grade ceramic coating application for long-lasting paint protection, hydrophobic finish, and UV resistance.',
+    shortDescription: 'Long-lasting ceramic paint protection',
     icon: 'Shield',
     includedServices: [
-      'Descontaminación exterior completa',
-      'Tratamiento con barra de arcilla',
-      'Corrección de pintura multi-paso',
-      'Aplicación de recubrimiento cerámico (2 capas)',
-      'Recubrimiento cerámico de rines',
-      'Recubrimiento cerámico de vidrios',
-      'Restauración de molduras',
-      'Detallamiento interior completo incluido',
-      'Garantía de recubrimiento de 2 años',
-      'Kit de mantenimiento incluido',
+      'Full exterior decontamination',
+      'Clay bar treatment',
+      'Multi-step paint correction',
+      'Ceramic coating application (2 layers)',
+      'Wheel ceramic coating',
+      'Glass ceramic coating',
+      'Trim restoration',
+      'Full interior detail included',
+      '2-year coating warranty',
+      'Maintenance kit included',
     ],
     pricing: {
       sedan: 299,
@@ -132,71 +132,71 @@ export const SERVICE_PACKAGES: ServicePackage[] = [
 ];
 
 // ============================================================
-// Servicios Adicionales
+// Add-On Services
 // ============================================================
 
 export const ADD_ONS: AddOn[] = [
   {
     id: 'pet-hair-removal',
-    name: 'Remoción de Pelo de Mascota',
-    description: 'Remoción completa de pelo de mascota incrustado en asientos, alfombras y tapicería.',
+    name: 'Pet Hair Removal',
+    description: 'Complete removal of embedded pet hair from seats, carpets, and upholstery.',
     price: 25,
     icon: 'PawPrint',
   },
   {
     id: 'odor-treatment',
-    name: 'Tratamiento de Olores',
-    description: 'Tratamiento profundo con ozono o enzimas para eliminar olores persistentes de la cabina.',
+    name: 'Odor Treatment',
+    description: 'Deep ozone or enzyme treatment to eliminate persistent cabin odors.',
     price: 35,
     icon: 'Wind',
   },
   {
     id: 'engine-bay-cleaning',
-    name: 'Limpieza de Motor',
-    description: 'Desengrase y detallamiento del compartimento del motor para un aspecto de sala de exhibición.',
+    name: 'Engine Bay Cleaning',
+    description: 'Degreasing and detailing of the engine compartment for a showroom look.',
     price: 45,
     icon: 'Cog',
   },
   {
     id: 'headlight-restoration',
-    name: 'Restauración de Faros',
-    description: 'Restaura faros opacos y amarillentos a una condición cristalina.',
+    name: 'Headlight Restoration',
+    description: 'Restores hazy and yellowed headlights to crystal-clear condition.',
     price: 50,
     icon: 'Lightbulb',
   },
   {
     id: 'scratch-removal',
-    name: 'Remoción de Rayones',
-    description: 'Corrección puntual de rayones menores y marcas de remolino en superficies pintadas.',
+    name: 'Scratch Removal',
+    description: 'Spot correction of minor scratches and swirl marks on painted surfaces.',
     price: 75,
     icon: 'Eraser',
   },
   {
     id: 'leather-conditioning',
-    name: 'Acondicionamiento de Piel',
-    description: 'Tratamiento premium de piel para limpiar, acondicionar y proteger superficies de piel.',
+    name: 'Leather Conditioning',
+    description: 'Premium leather treatment to clean, condition, and protect leather surfaces.',
     price: 40,
     icon: 'Armchair',
   },
 ];
 
 // ============================================================
-// Enlaces de Navegación
+// Navigation Links
 // ============================================================
 
 export const NAV_LINKS = [
-  { href: '/', label: 'Inicio' },
-  { href: '/services', label: 'Servicios' },
-  { href: '/gallery', label: 'Galería' },
-  { href: '/book', label: 'Reservar', isCTA: true },
-  { href: '/about', label: 'Nosotros' },
-  { href: '/reviews', label: 'Reseñas' },
-  { href: '/faq', label: 'Preguntas' },
-  { href: '/contact', label: 'Contacto' },
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/book', label: 'Book Now', isCTA: true },
+  { href: '/about', label: 'About' },
+  { href: '/reviews', label: 'Reviews' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/contact', label: 'Contact' },
 ] as const;
 
 // ============================================================
-// Información del Negocio
+// Business Info
 // ============================================================
 
 export const BUSINESS_INFO = {
@@ -206,13 +206,13 @@ export const BUSINESS_INFO = {
   whatsapp: '+15551234567',
   address: '123 Main Street, Anytown, TX 12345',
   hours: [
-    { day: 'Lunes', hours: '8:00 AM – 6:00 PM' },
-    { day: 'Martes', hours: '8:00 AM – 6:00 PM' },
-    { day: 'Miércoles', hours: '8:00 AM – 6:00 PM' },
-    { day: 'Jueves', hours: '8:00 AM – 6:00 PM' },
-    { day: 'Viernes', hours: '8:00 AM – 6:00 PM' },
-    { day: 'Sábado', hours: '9:00 AM – 5:00 PM' },
-    { day: 'Domingo', hours: 'Cerrado' },
+    { day: 'Monday', hours: '8:00 AM – 6:00 PM' },
+    { day: 'Tuesday', hours: '8:00 AM – 6:00 PM' },
+    { day: 'Wednesday', hours: '8:00 AM – 6:00 PM' },
+    { day: 'Thursday', hours: '8:00 AM – 6:00 PM' },
+    { day: 'Friday', hours: '8:00 AM – 6:00 PM' },
+    { day: 'Saturday', hours: '9:00 AM – 5:00 PM' },
+    { day: 'Sunday', hours: 'Closed' },
   ],
   social: {
     facebook: 'https://facebook.com/detaildudes',
@@ -223,7 +223,7 @@ export const BUSINESS_INFO = {
 } as const;
 
 // ============================================================
-// Horarios Disponibles
+// Available Time Slots
 // ============================================================
 
 export const TIME_SLOTS = [
@@ -239,7 +239,7 @@ export const TIME_SLOTS = [
 ] as const;
 
 // ============================================================
-// Restricciones de Reserva
+// Booking Constraints
 // ============================================================
 
 export const BOOKING_CONSTRAINTS = {

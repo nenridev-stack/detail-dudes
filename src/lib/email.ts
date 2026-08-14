@@ -58,7 +58,7 @@ export async function sendBookingConfirmation(
     <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; background: #000; color: #fff; padding: 40px 20px;">
       <div style="text-align: center; margin-bottom: 30px;">
         <h1 style="font-size: 24px; font-weight: bold; margin: 0; color: #fff;">${BUSINESS_NAME}</h1>
-        <p style="color: #999; font-size: 14px; margin-top: 8px;">Detallamiento Profesional de Autos</p>
+        <p style="color: #999; font-size: 14px; margin-top: 8px;">Professional Auto Detailing</p>
       </div>
       
       <div style="background: ${depositPaid ? '#0f2a1a' : '#111'}; border: 1px solid ${depositPaid ? '#1a4a2e' : '#222'}; border-radius: 12px; padding: 30px; margin-bottom: 20px;">

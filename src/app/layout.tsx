@@ -19,11 +19,11 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Detail Dudes | Detallamiento Profesional de Autos',
+    default: 'Detail Dudes | Professional Auto Detailing',
     template: '%s | Detail Dudes',
   },
   description:
-    'Servicios profesionales de detallamiento automotriz incluyendo interior/exterior completo, recubrimiento cerámico y paquetes de lavado básico para sedanes, SUVs y camionetas.',
+    'Professional auto detailing services including full interior/exterior, ceramic coating, and basic wash packages for sedans, SUVs, and trucks.',
 };
 
 export default function RootLayout({
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <body className="min-h-dvh font-sans antialiased bg-black text-white">
         <Navigation />
         <main className="pt-0">

@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
 import { bookingSchema } from '@/lib/validation';
 import { getStripeClient, DEPOSIT_AMOUNT_USD } from '@/lib/stripe';
 import { BUSINESS_INFO } from '@/lib/constants';
@@ -47,9 +47,9 @@ export async function POST(request: NextRequest) {
           price_data: {
             currency: 'usd',
             product_data: {
-              name: `${BUSINESS_INFO.name} — Booking Deposit`,
+              name: `${BUSINESS_INFO.name} â€” Booking Deposit`,
               description:
-                'Depósito reembolsable para confirmar tu cita. El precio final se confirma después de la inspección del vehículo.',
+                'DepÃ³sito reembolsable para confirmar tu cita. El precio final se confirma despuÃ©s de la inspecciÃ³n del vehÃ­culo.',
             },
             unit_amount: DEPOSIT_AMOUNT_USD * 100,
           },
@@ -87,7 +87,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        message: `No se pudo iniciar el pago: ${errorMessage}. Por favor intenta de nuevo o contáctanos directamente.`,
+        message: `No se pudo iniciar el pago: ${errorMessage}. Por favor intenta de nuevo o contÃ¡ctanos directamente.`,
         fallbackContact: {
           phone: BUSINESS_INFO.phone,
           email: BUSINESS_INFO.email,
@@ -97,3 +97,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+

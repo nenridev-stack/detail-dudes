@@ -13,7 +13,7 @@ interface LightboxImage {
 }
 
 /**
- * Contenido interactivo del lado del cliente para la página de Galería.
+ * Interactive client-side content for the Gallery page.
  */
 export function GalleryContent() {
   const [activeFilter, setActiveFilter] = useState<GalleryCategory>('all');
@@ -25,7 +25,7 @@ export function GalleryContent() {
     [activeFilter]
   );
 
-  // Construir lista plana de imágenes de lightbox a partir de items filtrados
+  // Build flat list of lightbox images from filtered items
   const lightboxImages: LightboxImage[] = useMemo(
     () =>
       filteredItems.flatMap((item) => [
@@ -55,11 +55,11 @@ export function GalleryContent() {
       <ScrollReveal>
         <section className="text-center pt-24 pb-8 md:pt-32 md:pb-12 px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Nuestro Trabajo
+            Our Work
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-            Explora las transformaciones de antes y después de nuestros servicios de detallamiento.
-            Cada foto muestra la calidad y cuidado que ponemos en cada vehículo.
+            Explore the before and after transformations from our detailing services.
+            Every photo showcases the quality and care we put into every vehicle.
           </p>
         </section>
       </ScrollReveal>

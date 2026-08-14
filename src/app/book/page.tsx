@@ -3,9 +3,9 @@ import { Suspense } from 'react';
 import BookingForm from '@/components/booking/BookingForm';
 
 export const metadata: Metadata = {
-  title: 'Reserva Tu Detallamiento',
+  title: 'Book Your Detail',
   description:
-    'Programa tu cita de detallamiento automotriz profesional. Elige tu vehículo, paquete de servicio y fecha preferida en nuestro formulario fácil de reserva.',
+    'Schedule your professional auto detailing appointment. Choose your vehicle, service package, and preferred date in our easy booking form.',
 };
 
 export default function BookPage() {
@@ -13,14 +13,13 @@ export default function BookPage() {
     <section className="min-h-[calc(100dvh-4rem)] py-12 md:py-16 pt-24 bg-black">
       <div className="container mx-auto">
         <h1 className="text-3xl md:text-4xl font-display font-bold text-center text-white mb-2">
-          Reserva Tu Detallamiento
+          Book Your Detail
         </h1>
         <p className="text-gray-400 text-center mb-10 max-w-lg mx-auto">
-          Completa los pasos a continuación para programar tu cita. Revisaremos tu
-          solicitud y confirmaremos el precio final.
+          Complete the steps below to schedule your appointment. We&apos;ll review your
+          request and confirm the final price.
         </p>
 
-        {/* Suspense boundary para useSearchParams */}
         <Suspense
           fallback={
             <div className="flex items-center justify-center py-16">

@@ -6,7 +6,7 @@ import { galleryItems } from '@/data/gallery';
 import { StaggeredGrid } from '@/components/motion';
 
 /**
- * Sección de vista previa de galería con fondo oscuro y efectos cinematográficos.
+ * Gallery preview section with dark background and cinematic effects.
  */
 export function GalleryPreview() {
   const previewItems = galleryItems.slice(0, 3);
@@ -16,10 +16,10 @@ export function GalleryPreview() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-white">
-            Antes y Después
+            Before & After
           </h2>
           <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-            Mira la transformación que nuestros servicios de detallamiento ofrecen.
+            See the transformation our detailing services deliver.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export function GalleryPreview() {
                     sizes="(max-width: 768px) 50vw, 25vw"
                   />
                   <span className="absolute bottom-2 left-2 rounded bg-black/70 px-2 py-0.5 text-xs font-medium text-white">
-                    Antes
+                    Before
                   </span>
                 </div>
                 <div className="relative aspect-[3/2] overflow-hidden">
@@ -53,7 +53,7 @@ export function GalleryPreview() {
                     sizes="(max-width: 768px) 50vw, 25vw"
                   />
                   <span className="absolute bottom-2 left-2 rounded bg-black/70 px-2 py-0.5 text-xs font-medium text-white">
-                    Después
+                    After
                   </span>
                 </div>
               </div>
@@ -61,10 +61,10 @@ export function GalleryPreview() {
                 <p className="text-sm font-medium text-gray-300">
                   {item.vehicleType} —{' '}
                   {item.category === 'basic-wash'
-                    ? 'Lavado Básico'
+                    ? 'Basic Wash'
                     : item.category === 'full-detail'
-                      ? 'Detallamiento Completo'
-                      : 'Recubrimiento Cerámico'}
+                      ? 'Full Detail'
+                      : 'Ceramic Coating'}
                 </p>
               </div>
             </div>
@@ -76,7 +76,7 @@ export function GalleryPreview() {
             href="/gallery"
             className="inline-flex items-center gap-2 font-medium text-accent-400 hover:text-accent-300 transition-colors duration-200 group"
           >
-            Ver Galería Completa
+            View Full Gallery
             <span className="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
           </Link>
         </div>

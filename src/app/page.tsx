@@ -10,25 +10,25 @@ import {
 } from '@/components/home';
 
 export const metadata: Metadata = {
-  title: 'Detail Dudes | Detallamiento Premium de Autos',
+  title: 'Detail Dudes | Premium Auto Detailing',
   description:
-    'Servicios profesionales de detallamiento automotriz en tu área. Interior/exterior completo, recubrimiento cerámico y paquetes de lavado para sedanes, SUVs y camionetas.',
+    'Professional auto detailing services in your area. Full interior/exterior, ceramic coating, and wash packages for sedans, SUVs, and trucks.',
   openGraph: {
-    title: 'Detail Dudes | Detallamiento Premium de Autos',
+    title: 'Detail Dudes | Premium Auto Detailing',
     description:
-      'Servicios profesionales de detallamiento automotriz. Detallamiento completo, recubrimiento cerámico y paquetes de lavado con precios transparentes.',
+      'Professional auto detailing services. Full detailing, ceramic coating, and wash packages with transparent pricing.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Detail Dudes | Detallamiento Premium de Autos',
+    title: 'Detail Dudes | Premium Auto Detailing',
     description:
-      'Servicios profesionales de detallamiento automotriz. Detallamiento completo, recubrimiento cerámico y paquetes de lavado con precios transparentes.',
+      'Professional auto detailing services. Full detailing, ceramic coating, and wash packages with transparent pricing.',
   },
 };
 
 /**
- * Página principal — ensambla todas las secciones con animaciones.
+ * Home page — assembles all sections with animations.
  */
 export default function HomePage() {
   return (

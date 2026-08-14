@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { AboutContent } from './AboutContent';
 
 export const metadata: Metadata = {
-  title: 'Sobre Nosotros',
+  title: 'About Us',
   description:
-    'Conoce la historia detrás de Detail Dudes, nuestras certificaciones y el área de servicio que cubrimos.',
+    'Learn the story behind Detail Dudes, our certifications, and the service area we cover.',
 };
 
 export default function AboutPage() {

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { GalleryContent } from './GalleryContent';
 
 export const metadata: Metadata = {
-  title: 'Galería',
+  title: 'Gallery',
   description:
-    'Explora nuestra galería de antes y después mostrando transformaciones de detallamiento automotriz profesional en sedanes, SUVs y camionetas.',
+    'Explore our before and after gallery showcasing professional auto detailing transformations on sedans, SUVs, and trucks.',
 };
 
 export default function GalleryPage() {

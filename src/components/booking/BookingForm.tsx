@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useReducer, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -223,12 +223,12 @@ const stepVariants = {
 // ============================================================
 
 const STEP_LABELS: Record<BookingStep, string> = {
-  1: 'Tipo de Vehículo',
-  2: 'Fotos de Condición',
-  3: 'Selección de Servicio',
-  4: 'Fecha y Hora',
-  5: 'Info de Contacto',
-  6: 'Confirmación',
+  1: 'Vehicle Type',
+  2: 'Condition Photos',
+  3: 'Service Selection',
+  4: 'Date & Time',
+  5: 'Contact Info',
+  6: 'Confirmation',
 };
 
 // ============================================================
@@ -276,7 +276,7 @@ export default function BookingForm() {
     dispatch({ type: 'PREV_STEP' });
   }, []);
 
-  // Handle form submission — uploads photos to Cloudinary first, then creates
+  // Handle form submission â€” uploads photos to Cloudinary first, then creates
   // a Stripe Checkout session for the $50 deposit. The Cloudinary URLs are stored
   // in session metadata so the webhook can include them in emails/calendar/sheets.
   const handleSubmit = useCallback(async () => {
@@ -328,7 +328,7 @@ export default function BookingForm() {
       const data: BookingResponse & { url?: string } = await response.json();
 
       if (data.success && data.url) {
-        // Redirect to Stripe Checkout — payment confirmation happens via webhook
+        // Redirect to Stripe Checkout â€” payment confirmation happens via webhook
         window.location.href = data.url;
         return;
       }
@@ -336,7 +336,7 @@ export default function BookingForm() {
       dispatch({
         type: 'SUBMIT_ERROR',
         payload: {
-          message: data.message || 'Algo salió mal. Por favor intenta de nuevo.',
+          message: data.message || 'Algo saliÃ³ mal. Por favor intenta de nuevo.',
           fallbackContact: data.fallbackContact,
         },
       });
@@ -345,7 +345,7 @@ export default function BookingForm() {
       dispatch({
         type: 'SUBMIT_ERROR',
         payload: {
-          message: 'No se pudo conectar a nuestro servicio de reservas. Por favor intenta de nuevo o contáctanos directamente.',
+          message: 'Could not connect to our booking service. Please try again or contact us directly.',
           fallbackContact: {
             phone: BUSINESS_INFO.phone,
             email: BUSINESS_INFO.email,
@@ -451,14 +451,14 @@ export default function BookingForm() {
             </svg>
           </div>
           <h2 className="text-2xl font-display font-bold text-white mb-3">
-            ¡Solicitud de Reserva Recibida!
+            Booking Request Received!
           </h2>
           <p className="text-gray-400 max-w-md mx-auto mb-4">
-            Gracias por elegir {BUSINESS_INFO.name}. Tu solicitud de reserva ha sido enviada exitosamente.
+            Thank you for choosing {BUSINESS_INFO.name}. Your booking request has been submitted successfully.
           </p>
           <p className="text-gray-500 text-sm max-w-md mx-auto">
-            {`Revisaremos tus fotos y confirmaremos el precio final dentro de 24 horas.`}
-            {' '}Recibirás un correo de confirmación en{' '}
+            {`We'll review your photos and confirm the final price within 24 hours.`}
+            {' '}You&apos;ll receive a confirmation email at{' '}
             <span className="font-medium text-gray-300">{state.contact?.email}</span>.
           </p>
           <div className="mt-8">
@@ -466,7 +466,7 @@ export default function BookingForm() {
               href="/"
               className="px-6 py-3 rounded-lg bg-accent-500 text-white text-sm font-medium hover:bg-accent-600 transition-colors inline-block min-h-[44px]"
             >
-              Volver al Inicio
+              Back to Home
             </a>
           </div>
         </motion.div>
@@ -497,7 +497,7 @@ export default function BookingForm() {
             </svg>
           </div>
           <h2 className="text-2xl font-display font-bold text-white mb-3">
-            No Se Pudo Procesar la Reserva
+            Could Not Process Booking
           </h2>
           <p className="text-gray-400 max-w-md mx-auto mb-6">
             {state.submitError}
@@ -505,7 +505,7 @@ export default function BookingForm() {
           {state.fallbackContact && (
             <div className="bg-white/5 border border-white/10 rounded-xl p-6 max-w-sm mx-auto mb-8">
               <p className="text-sm font-medium text-gray-300 mb-3">
-                Contáctanos directamente:
+                Contact us directly:
               </p>
               <div className="space-y-2 text-sm">
                 <a
@@ -535,13 +535,13 @@ export default function BookingForm() {
               onClick={() => dispatch({ type: 'RESET_ERROR' })}
               className="px-6 py-3 rounded-lg bg-accent-500 text-white text-sm font-medium hover:bg-accent-600 transition-colors min-h-[44px] min-w-[44px]"
             >
-              Intentar de Nuevo
+              Try Again
             </button>
             <a
               href="/"
               className="px-6 py-3 rounded-lg border border-white/10 text-white text-sm font-medium hover:bg-white/5 transition-colors inline-flex items-center min-h-[44px] min-w-[44px]"
             >
-              Volver al Inicio
+              Back to Home
             </a>
           </div>
         </motion.div>
@@ -559,7 +559,7 @@ export default function BookingForm() {
         onBack={handleBack}
       />
 
-      {/* Step Content — rendered directly without animation to prevent blank flashes */}
+      {/* Step Content â€” rendered directly without animation to prevent blank flashes */}
       <div className="relative min-h-[300px]">
         {renderStep()}
       </div>
@@ -573,7 +573,7 @@ export default function BookingForm() {
               onClick={handleBack}
               className="px-6 py-3 rounded-lg border border-white/10 text-white text-sm font-medium hover:bg-white/5 transition-colors min-h-[44px] min-w-[44px]"
             >
-              Atrás
+              AtrÃ¡s
             </button>
           )}
         </div>
@@ -584,7 +584,7 @@ export default function BookingForm() {
               onClick={() => dispatch({ type: 'NEXT_STEP' })}
               className="px-6 py-3 rounded-lg bg-accent-500 text-white text-sm font-medium hover:bg-accent-600 transition-colors min-h-[44px] min-w-[44px]"
             >
-              Siguiente
+              Next
             </button>
           )}
         </div>
@@ -592,3 +592,4 @@ export default function BookingForm() {
     </div>
   );
 }
+

@@ -17,7 +17,7 @@ export default function Footer() {
     <footer className="bg-[#0a0a0a] text-gray-400 border-t border-white/10">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {/* Columna 1: Nombre del negocio y eslogan */}
+          {/* Column 1: Business name & tagline */}
           <div>
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
@@ -32,14 +32,14 @@ export default function Footer() {
               <h2 className="text-lg font-bold text-white">{BUSINESS_INFO.name}</h2>
             </div>
             <p className="mt-3 text-sm text-gray-500">
-              Servicios profesionales de detallamiento automotriz que devuelven tu vehículo a condición de sala de exhibición.
+              Professional auto detailing services that bring your vehicle back to showroom condition.
             </p>
           </div>
 
-          {/* Columna 2: Enlaces rápidos */}
+          {/* Column 2: Quick Links */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-              Enlaces Rápidos
+              Quick Links
             </h3>
             <ul className="mt-4 space-y-2">
               {QUICK_LINKS.map(({ href, label }) => (
@@ -55,10 +55,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Columna 3: Información de contacto */}
+          {/* Column 3: Contact Info */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-              Contáctanos
+              Contact Us
             </h3>
             <ul className="mt-4 space-y-3">
               <li className="flex items-start gap-2 text-sm">
@@ -97,10 +97,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Columna 4: Redes sociales */}
+          {/* Column 4: Social Media */}
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-              Síguenos
+              Follow Us
             </h3>
             <div className="mt-4 flex gap-4">
               {SOCIAL_LINKS.map(({ href, label, icon: Icon }) => (
@@ -119,25 +119,25 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Barra inferior */}
+        {/* Bottom bar */}
         <div className="mt-10 border-t border-white/10 pt-6">
           <div className="flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
             <p className="text-gray-500">
-              &copy; {new Date().getFullYear()} {BUSINESS_INFO.name}. Todos los derechos reservados.
+              &copy; {new Date().getFullYear()} {BUSINESS_INFO.name}. All rights reserved.
             </p>
             <div className="flex gap-4">
               <Link
                 href="/privacy"
                 className="text-gray-500 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-[#0a0a0a] rounded"
               >
-                Política de Privacidad
+                Privacy Policy
               </Link>
               <span className="text-white/10" aria-hidden="true">|</span>
               <Link
                 href="/terms"
                 className="text-gray-500 transition hover:text-white focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2 focus:ring-offset-[#0a0a0a] rounded"
               >
-                Términos de Servicio
+                Terms of Service
               </Link>
             </div>
           </div>

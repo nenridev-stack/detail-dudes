@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
@@ -27,37 +27,37 @@ interface FieldError {
 }
 
 function validateFullName(value: string): string | undefined {
-  if (!value.trim()) return 'El nombre completo es requerido';
-  if (value.length > 100) return 'El nombre debe tener 100 caracteres o menos';
+  if (!value.trim()) return 'Full name is required';
+  if (value.length > 100) return 'Name must be 100 characters or less';
   return undefined;
 }
 
 function validateEmail(value: string): string | undefined {
-  if (!value.trim()) return 'El correo es requerido';
+  if (!value.trim()) return 'Email is required';
   // Simple regex: includes @ and .
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(value)) return 'Por favor ingresa un correo válido';
+  if (!emailRegex.test(value)) return 'Please enter a valid email';
   return undefined;
 }
 
 function validatePhone(value: string): string | undefined {
-  if (!value.trim()) return 'El número de teléfono es requerido';
+  if (!value.trim()) return 'Phone number is required';
   // Accept any phone number with at least 7 digits
   const digits = value.replace(/\D/g, '');
-  if (digits.length < 7) return 'Por favor ingresa un número de teléfono válido';
-  if (digits.length > 15) return 'El número de teléfono es muy largo';
+  if (digits.length < 7) return 'Please enter a valid phone number';
+  if (digits.length > 15) return 'Phone number is too long';
   return undefined;
 }
 
 function validateNotes(value: string): string | undefined {
-  if (value.length > 500) return 'Las notas deben tener 500 caracteres o menos';
+  if (value.length > 500) return 'Notes must be 500 characters or less';
   return undefined;
 }
 
 function validateAddress(value: string): string | undefined {
-  if (!value.trim()) return 'La dirección de servicio es requerida para saber dónde detallar tu vehículo';
-  if (value.trim().length < 5) return 'Por favor ingresa una dirección más completa';
-  if (value.length > 300) return 'La dirección debe tener 300 caracteres o menos';
+  if (!value.trim()) return 'Service address is required so we know where to detail your vehicle';
+  if (value.trim().length < 5) return 'Please enter a more complete address';
+  if (value.length > 300) return 'Address must be 300 characters or less';
   return undefined;
 }
 
@@ -305,18 +305,18 @@ export default function ContactStep({ contact, onContactChange, onNext }: Contac
     <div className="py-8">
       <div className="text-center mb-8">
         <h2 className="text-2xl font-display font-bold text-white mb-2">
-          Tu Información de Contacto
+          Your Contact Information
         </h2>
         <p className="text-gray-400 text-sm">
-          Usaremos esto para confirmar tu reserva y comunicarnos sobre tu cita.
+          We&apos;ll use this to confirm your booking and communicate about your appointment.
         </p>
       </div>
 
       <div className="space-y-5 max-w-md mx-auto">
-        {/* Nombre Completo */}
+        {/* Full Name */}
         <FloatingLabelInput
           id="contact-fullname"
-          label="Nombre Completo"
+          label="Full Name"
           value={form.fullName}
           onChange={(v) => updateField('fullName', v)}
           error={errors.fullName}
@@ -325,10 +325,10 @@ export default function ContactStep({ contact, onContactChange, onNext }: Contac
           required
         />
 
-        {/* Correo */}
+        {/* Email */}
         <FloatingLabelInput
           id="contact-email"
-          label="Correo Electrónico"
+          label="Correo ElectrÃ³nico"
           value={form.email}
           onChange={(v) => updateField('email', v)}
           error={errors.email}
@@ -337,10 +337,10 @@ export default function ContactStep({ contact, onContactChange, onNext }: Contac
           required
         />
 
-        {/* Teléfono */}
+        {/* Phone */}
         <FloatingLabelInput
           id="contact-phone"
-          label="Número de Teléfono"
+          label="Phone Number"
           value={form.phone}
           onChange={(v) => updateField('phone', v)}
           error={errors.phone}
@@ -349,10 +349,10 @@ export default function ContactStep({ contact, onContactChange, onNext }: Contac
           required
         />
 
-        {/* Dirección de Servicio */}
+        {/* Service Address */}
         <FloatingLabelInput
           id="contact-address"
-          label="Dirección de Servicio (donde detallaremos tu auto)"
+          label="Service Address (where we'll detail your car)"
           value={form.address}
           onChange={(v) => updateField('address', v)}
           error={errors.address}
@@ -361,10 +361,10 @@ export default function ContactStep({ contact, onContactChange, onNext }: Contac
           required
         />
 
-        {/* Notas (opcional) */}
+        {/* Notes (optional) */}
         <FloatingLabelInput
           id="contact-notes"
-          label="Notas Adicionales"
+          label="Additional Notes"
           value={form.notes}
           onChange={(v) => updateField('notes', v)}
           error={errors.notes}
@@ -375,7 +375,7 @@ export default function ContactStep({ contact, onContactChange, onNext }: Contac
         />
       </div>
 
-      {/* Botón Siguiente */}
+      {/* BotÃ³n Siguiente */}
       <div className="mt-8 flex justify-center">
         <motion.button
           type="button"
@@ -386,9 +386,11 @@ export default function ContactStep({ contact, onContactChange, onNext }: Contac
           whileHover={{ scale: 1.03 }}
           whileTap={{ scale: 0.97 }}
         >
-          Revisar Reserva
+          Review Booking
         </motion.button>
       </div>
     </div>
   );
 }
+
+

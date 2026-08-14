@@ -9,22 +9,22 @@ interface TrustStat {
 }
 
 const TRUST_STATS: TrustStat[] = [
-  { value: 10, suffix: '+', label: 'Años de Experiencia' },
-  { value: 5000, suffix: '+', label: 'Autos Detallados' },
-  { value: 5, suffix: ' Estrellas', label: 'Calificación Promedio' },
-  { value: 100, suffix: '%', label: 'Tasa de Satisfacción' },
+  { value: 10, suffix: '+', label: 'Years Experience' },
+  { value: 5000, suffix: '+', label: 'Cars Detailed' },
+  { value: 5, suffix: ' Stars', label: 'Average Rating' },
+  { value: 100, suffix: '%', label: 'Satisfaction Rate' },
 ];
 
 /**
- * Barra de confianza con fondo negro puro, estadísticas brillantes,
- * divisores delgados y líneas de gradiente arriba/abajo.
+ * Trust bar with pure black background, glowing stats,
+ * thin dividers, and gradient lines above/below.
  */
 export function TrustBar() {
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-black overflow-hidden">
-      {/* Línea de gradiente superior */}
+      {/* Top gradient line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-500/40 to-transparent" />
-      {/* Línea de gradiente inferior */}
+      {/* Bottom gradient line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent-500/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative z-10">
